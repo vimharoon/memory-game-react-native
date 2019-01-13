@@ -3,38 +3,34 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import GameScreen from '../screens/GameScreen';
+import HallOfFameScreen from '../screens/HallOfFameScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+const GameStack = createStackNavigator({
+  Home: GameScreen,
 });
 
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+GameStack.navigationOptions = {
+  tabBarLabel: 'Jouer',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={Platform.OS === 'ios' ? 'ios-play' : 'md-play'}
     />
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const HallOfFameStack = createStackNavigator({
+  Links: HallOfFameScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+HallOfFameStack.navigationOptions = {
+  tabBarLabel: 'Scores',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'ios-trophy' : 'md-trophy'}
     />
   ),
 };
@@ -44,7 +40,7 @@ const SettingsStack = createStackNavigator({
 });
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Paramètres',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -54,7 +50,7 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
+  GameStack,
+  HallOfFameStack,
   SettingsStack,
 });

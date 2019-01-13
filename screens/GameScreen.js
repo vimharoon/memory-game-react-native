@@ -1,17 +1,17 @@
-import React from 'react';
-import { ScrollView, ImageBackground, Text, StyleSheet } from 'react-native';
+import React, { Component } from 'react';
+import { ScrollView, Text, ImageBackground, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
 
-export default class SettingsScreen extends React.Component {
+export default class GameScreen extends React.Component {
   static navigationOptions = {
-    title: 'Paramètres',
+    title: 'Jouer',
   };
 
   render() {
     return (
-      <ImageBackground source={require('../assets/images/bgSettings.png')} style={styles.backgroundImage}>
+      <ImageBackground source={require('../assets/images/bgApp.png')} style={styles.backgroundImage}>
         <ScrollView style={styles.container}>
-          <Text>Settings</Text>
+          <Text>Game</Text>
         </ScrollView>
       </ImageBackground>
     );

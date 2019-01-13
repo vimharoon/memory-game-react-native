@@ -5,3 +5,12 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Memory Game",
-    "slug": "Memory Game",
+    "name": "memory-game",
+    "slug": "memory-game",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [

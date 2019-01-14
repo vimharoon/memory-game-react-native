@@ -5,6 +5,12 @@ import { Constants } from 'expo';
 export default class SettingsScreen extends React.Component {
   static navigationOptions = {
     title: 'Paramètres',
+    headerTransparent: true,
+    headerTitleStyle: {
+      fontFamily: 'cartoon',
+      fontSize: 30,
+      color: '#BF3905',
+    },
   };
 
   render() {

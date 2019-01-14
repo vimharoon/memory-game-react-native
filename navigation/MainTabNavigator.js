@@ -8,11 +8,22 @@ import HallOfFameScreen from '../screens/HallOfFameScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const GameStack = createStackNavigator({
-  Home: GameScreen,
+  Game: GameScreen,
 });
 
 GameStack.navigationOptions = {
   tabBarLabel: 'Jouer',
+  tabBarOptions: {
+    activeTintColor: '#B32AA4',
+    labelStyle: {
+      fontFamily: 'cartoon',
+      fontSize: 12,
+      color: '#FFFFFF',
+    },
+    style: {
+      backgroundColor: '#E23622',
+    },
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -22,11 +33,22 @@ GameStack.navigationOptions = {
 };
 
 const HallOfFameStack = createStackNavigator({
-  Links: HallOfFameScreen,
+  HallOfFame: HallOfFameScreen,
 });
 
 HallOfFameStack.navigationOptions = {
   tabBarLabel: 'Scores',
+  tabBarOptions: {
+    activeTintColor: '#B32AA4',
+    labelStyle: {
+      fontFamily: 'cartoon',
+      fontSize: 12,
+      color: '#FFFFFF',
+    },
+    style: {
+      backgroundColor: '#E23622',
+    },
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -41,6 +63,17 @@ const SettingsStack = createStackNavigator({
 
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Paramètres',
+  tabBarOptions: {
+    activeTintColor: '#B32AA4',
+    labelStyle: {
+      fontFamily: 'cartoon',
+      fontSize: 12,
+      color: '#FFFFFF',
+    },
+    style: {
+      backgroundColor: '#E23622',
+    },
+  },
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

@@ -5,6 +5,12 @@ import { Constants } from 'expo';
 export default class HallOfFameScreen extends React.Component {
   static navigationOptions = {
     title: 'Scores',
+    headerTransparent: true,
+    headerTitleStyle: {
+      fontFamily: 'cartoon',
+      fontSize: 30,
+      color: '#0E5C03',
+    },
   };
 
   render() {
@@ -22,6 +28,9 @@ const styles = StyleSheet.create({
   backgroundImage: {
     width: '100%',
     height: '100%',
+  },
+  headerBackground: {
+    backgroundColor: 'transparent',
   },
   container: {
     flex: 1,

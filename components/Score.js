@@ -3,16 +3,12 @@ import { View, Text, Button } from "react-native";
 
 export default class Score extends Component {
   render() {
-    const { score } = this.props;
+    const { score, username } = this.props;
 
     return (
       <View style={styles.scoreContainer}>
-        <View style={styles.scoreText}>
-          <Text style={styles.score}>Points: {score}</Text>
-        </View>
-        <View style={styles.restartBtn}>
-          <Button onPress={this.props.clickRestart} title="Rejouer" color="#BF3905"/>
-        </View>
+        <Text style={styles.score}>Points: {score}</Text>
+        <Text style={styles.username}>Nom: {username}</Text>
       </View>
     );
   }
@@ -20,23 +16,23 @@ export default class Score extends Component {
 
 const styles = {
   scoreContainer: {
-    paddingTop: 60,
+    paddingTop: 55,
     height: 10,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
-  scoreText: {
+  username: {
+    height: 50,
     width: 150,
-    height: 50,
-    marginTop: 10,
-    marginLeft: 20,
-  },
-  restartBtn: {
-    width: 90,
-    height: 50,
-    marginRight: 20,
+    paddingLeft: 10,
+    fontSize: 20,
+    fontFamily: 'cartoon',
+    color: '#BF3905',
+    fontWeight: "bold",
   },
   score: {
+    height: 50,
+    paddingLeft: 10,
     fontSize: 20,
     fontFamily: 'cartoon',
     color: '#BF3905',

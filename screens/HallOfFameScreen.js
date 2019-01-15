@@ -16,9 +16,6 @@ export default class HallOfFameScreen extends React.Component {
   render() {
     return (
       <ImageBackground source={require('../assets/images/bgHallofFame.png')} style={styles.backgroundImage}>
-        <ScrollView style={styles.container}>
-          <Text>Hall of Fame</Text>
-        </ScrollView>
       </ImageBackground>
     );
   }
@@ -28,13 +25,5 @@ const styles = StyleSheet.create({
   backgroundImage: {
     width: '100%',
     height: '100%',
-  },
-  headerBackground: {
-    backgroundColor: 'transparent',
-  },
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: 'transparent',
   },
 });

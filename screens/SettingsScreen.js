@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, ImageBackground, Text, StyleSheet } from 'react-native';
+import { ImageBackground, StyleSheet } from 'react-native';
 import { Constants } from 'expo';
 
 export default class SettingsScreen extends React.Component {
@@ -15,10 +15,9 @@ export default class SettingsScreen extends React.Component {
 
   render() {
     return (
-      <ImageBackground source={require('../assets/images/bgSettings.png')} style={styles.backgroundImage}>
-        <ScrollView style={styles.container}>
-          <Text>Settings</Text>
-        </ScrollView>
+      <ImageBackground
+        source={require('../assets/images/bgSettings.png')}
+        style={styles.backgroundImage}>
       </ImageBackground>
     );
   }
